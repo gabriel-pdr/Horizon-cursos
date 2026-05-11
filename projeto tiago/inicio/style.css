@@ -1,0 +1,488 @@
+@import "/inicio/navbar.css";
+@import "/inicio/Responsive.css";
+@import "/inicio/Card.css";
+/* ========================================================
+   BASE / RESET
+   ======================================================== */
+.macbook-air {
+  background-color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ========================================================
+   SHARED CARD
+   ======================================================== */
+.card {
+  background-color: #2b333c;
+  border-radius: 38px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1051px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 38px 38px 0 0;
+  display: block;
+  max-height: 480px;
+}
+
+.card-body {
+  padding: 28px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card-title {
+  font-family: "Inter", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.2;
+  max-width: 320px;
+}
+
+.card-desc {
+  font-family: "Inter", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: clamp(11px, 1.2vw, 13px);
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+/* ========================================================
+   BUTTONS
+   ======================================================== */
+.btn-acessar {
+  display: inline-block;
+  width: fit-content;
+  padding: 12px 28px;
+  border-radius: 6px;
+  border: 2px solid #009eff;
+  font-family: "Roboto", Helvetica;
+  font-weight: 700;
+  color: #009eff;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.btn-acessar:hover {
+  background-color: rgba(0, 158, 255, 0.12);
+}
+
+.btn-login {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: 2px solid #009eff;
+  background-color: #0f7abe;
+  font-family: "Roboto", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #009eff;
+}
+
+/* ========================================================
+   SECTION: HERO
+   ======================================================== */
+.section-hero {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background-color: #103c66;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  display: block;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 48px;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-card {
+  margin: 0 auto;
+  width: calc(100% - 48px);
+}
+
+/* ========================================================
+   SECTION: CHALLENGE
+   ======================================================== */
+.section-challenge {
+  background-color: #ffffff;
+  padding: 60px 24px;
+}
+
+.challenge-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.challenge-img {
+  width: clamp(240px, 40%, 500px);
+  height: auto;
+  flex-shrink: 0;
+}
+
+.challenge-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  min-width: 220px;
+}
+
+.challenge-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.challenge-heading {
+  font-family: "Roboto", Helvetica;
+  font-weight: 900;
+  color: #2e526f;
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.2;
+}
+
+.challenge-body {
+  font-family: "Roboto", Helvetica;
+  font-weight: 900;
+  color: #000000;
+  font-size: clamp(13px, 1.4vw, 15px);
+  line-height: 1.5;
+  max-width: 340px;
+}
+
+/* ========================================================
+   SECTION: HORIZON
+   ======================================================== */
+.section-horizon {
+  position: relative;
+  width: 100%;
+}
+
+.horizon-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  display: block;
+}
+
+.horizon-inner {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+}
+
+.horizon-card {
+  margin: 16px auto 0;
+  width: calc(100% - 48px);
+  max-width: 1400px;
+}
+
+/* slider dots */
+.slider-dots {
+  display: flex;
+  gap: 8px;
+  padding: 12px 32px 0;
+}
+
+.dot {
+  width: 29px;
+  height: 4px;
+  background-color: #d9d9d9;
+  border-radius: 2px;
+}
+
+.dot--active {
+  background-color: #009eff;
+}
+
+.free-courses-banner {
+  position: relative;
+  max-width: 1400px;
+  margin: 28px auto 0;
+  width: calc(100% - 48px);
+  background-color: #0c2136;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.free-courses-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 33, 54, 0.9);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.free-courses-label {
+  font-family: "Inter", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: clamp(20px, 3vw, 32px);
+  position: relative;
+  z-index: 1;
+}
+
+.free-courses-nav {
+  background-color: #010305;
+  border: none;
+  border-radius: 6px;
+  width: 56px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: background 0.2s;
+}
+
+.free-courses-nav:hover {
+  background-color: #1a2a3a;
+}
+
+.free-courses-nav img {
+  width: 10px;
+  height: 18px;
+}
+
+/* ========================================================
+   SECTION: FOOTER / RESUMO EXECUTIVO
+   ======================================================== */
+.section-footer {
+  position: relative;
+  width: 100%;
+  padding: 60px 24px 80px;
+  overflow: hidden;
+  background-image: url("https://pixabay.com/pt/images/download/freephotocc-laptop-1478822_1920.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.footer-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+  z-index: 0;
+}
+
+.footer-dots {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-image: radial-gradient(circle, #0a1628 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+  opacity: 0.25;
+  z-index: 1;
+}
+
+.footer-dots--left {
+  top: 80px;
+  left: 20px;
+}
+
+.footer-dots--right {
+  bottom: 80px;
+  right: 20px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-title {
+  font-family: "Inter", Helvetica;
+  font-weight: 900;
+  font-size: clamp(22px, 4vw, 36px);
+  color: #0a1628;
+  text-align: center;
+  margin-bottom: 48px;
+  letter-spacing: 0.5px;
+}
+
+.footer-grid {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-heading {
+  font-family: "Inter", Helvetica;
+  font-weight: 900;
+  font-size: clamp(13px, 1.4vw, 16px);
+  color: #0a1628;
+  letter-spacing: 0.3px;
+}
+
+.footer-text {
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  font-size: clamp(12px, 1.2vw, 14px);
+  color: #1a1a2e;
+  line-height: 1.65;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-list li {
+  font-family: "Roboto", Helvetica;
+  font-size: clamp(12px, 1.2vw, 14px);
+  color: #1a1a2e;
+  line-height: 1.65;
+  padding-left: 16px;
+  position: relative;
+}
+
+.footer-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #1a1a2e;
+}
+
+.footer-img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.footer-img-caption {
+  font-family: "Roboto", Helvetica;
+  font-size: 10px;
+  color: #666666;
+  line-height: 1.4;
+  max-width: 260px;
+}
+
+.footer-btn {
+  display: inline-block;
+  background-color: #0a1628;
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-weight: 900;
+  font-size: clamp(13px, 1.3vw, 15px);
+  padding: 18px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.footer-btn:hover {
+  background-color: #103c66;
+}
+
+/* ========================================================
+   RESPONSIVE — TABLET  (641px – 1024px)
+   ======================================================== */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-inner {
+    min-height: 480px;
+  }
+
+  .challenge-inner {
+    flex-wrap: wrap;
+  }
+
+  .challenge-img {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .challenge-text {
+    width: 100%;
+  }
+
+  .card-body {
+    padding: 20px 24px 28px;
+  }
+
+  .footer-grid {
+    gap: 32px;
+  }
+
+  .card-panels {
+    flex-direction: column;
+  }
+}
