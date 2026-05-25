@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horizon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+
+  <!-- Toast de erro -->
+  <div class="toast" id="toast">
+    <div class="toast-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="8" x2="12" y2="12" />
+        <line x1="12" y1="16" x2="12.01" y2="16" />
+      </svg>
+    </div>
+    <div class="toast-text">
+      <strong id="toastTitle">Senha ou registro incorreto</strong>
+      <span id="toastSub">Tente novamente</span>
+    </div>
+  </div>
+
+  <div class="card" id="card">
+    <h1 class="card-title">Login</h1>
+
+    <div class="field">
+      <label for="email">Registro</label>
+      <div class="input-wrap">
+        <input type="text" id="email" placeholder="seu registro" autocomplete="username" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="senha">Senha</label>
+      <div class="input-wrap">
+        <input type="password" id="senha" placeholder="••••••••" autocomplete="current-password" />
+        <button class="toggle-pw" id="togglePw" aria-label="Mostrar senha" type="button">
+          <svg id="iconEye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+          <svg id="iconEyeOff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" />
+            <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" />
+            <line x1="1" y1="1" x2="23" y2="23" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="extras">
+      <label class="remember">
+        <input type="checkbox" id="lembre" />
+        <span>Lembre de mim</span>
+      </label>
+      <a href="#" class="forgot">Esqueceu a senha?</a>
+    </div>
+
+    <button class="btn-submit" id="btnLogin">Login</button>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+
+</html>
